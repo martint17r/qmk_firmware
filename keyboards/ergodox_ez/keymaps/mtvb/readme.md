@@ -1,4 +1,12 @@
-# ErgoDox EZ Default Configuration
+# ErgoDox lefthanded Mac OS VIM configuration
+
+## build
+
+```bash
+export PATH=/usr/local/Cellar/avr-gcc@7/7.3.0/bin/:$PATH
+make ergodox_ez:mtvb
+teensy_loader_cli -mmcu=atmega32u4 -w -v ergodox_ez_mtvb.hex
+```
 
 ## Changelog
 
