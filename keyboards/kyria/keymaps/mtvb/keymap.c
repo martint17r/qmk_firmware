@@ -32,37 +32,37 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
  * | Ctrl   |   A  |   S  |  D   |   F  |   G  |                              |   H  |   J  |   K  |   L  |   ö  |   ä    |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * | LShift |   Z  |   X  |   C  |   V  |   B  |      |      |  |      |      |   N  |   M  |   ,  |   .  |   -  |   ß    |
+ * |   <    |   Z  |   X  |   C  |   V  |   B  |      |      |  |      |      |   N  |   M  |   ,  |   .  |   -  |   ß    |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
  *                        |      |   \  | Enter| Space| CTRL |  |  CMD | Space| Bksp |  Tab | AltGr|
  *                        |      |  ALT | Shift| Lower|  :   |  |      | Raise|      |      |      |
- *                        `----------------------------------'  `----------------------------------'
+ *                        `---------------------------------'  `----------------------------------'
  */
     [_QWERTY] = LAYOUT(
       KC_ESC,                  KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,                                         KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC,
       CTL_T(KC_NO),            KC_A,   KC_S,   KC_D,   KC_F,   KC_G,                                         KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
-      KC_LSFT,                 KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   _______, _______, _______, _______,   KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_MINS,
+      KC_GRAVE,                KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   _______, _______, _______, _______,   KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_MINS,
               _______, LALT(DE_OSX_SLSH), KC_SFTENT, LT(_LOWER, KC_SPC), CTL_T(DE_OSX_COLN),MT(MOD_LGUI,DE_OSX_SLSH) , LT(_RAISE, KC_SPC), KC_BSPC, KC_TAB, KC_RALT
     ),
 /*
  * Lower Layer: Symbols
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
- * |        |  !   |  @   |  {   |  }   |  |   |                              |   ;  |  :   |      |      |      |  | \   |
+ * |        |  !   |  @   |  {   |  }   |  |   |                              |      |      |  *   |      |  ´   |        |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
- * |        |  #   |  €   |  (   |  )   |  `   |                              |   +  |  ß   |  /   |  *   |  %   |  ' "   |
+ * |        |  #   |  €   |  (   |  )   |  `   |                              |   +  |  ß   |  §   |  "   |  `   |        |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * |        |  %   |  ^   |  [   |  ]   |  ~   |      |      |  |      |      |   &  |  =   |  ,   |  .   |  / ? | - _    |
+ * |        |  %   |  ^   |  [   |  ]   |  ~   |      |      |  |      |      |   &  |  =   |      |      |   -  |        |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
- *                        |      |      |      |  ;   |  =   |  |  =   |  ;   |      |      |      |
+ *                        |      |      |      |      |      |  |      |      |      |      |      |
  *                        |      |      |      |      |      |  |      |      |      |      |      |
  *                        `----------------------------------'  `----------------------------------'
  */
     [_LOWER] = LAYOUT(
-      _______, DE_OSX_EXLM, DE_OSX_AT,   DE_OSX_LCBR, DE_OSX_RCBR, DE_OSX_PIPE,                                     DE_OSX_SCLN, DE_OSX_COLN, _______, _______, _______, KC_BSLS,
-      _______, DE_OSX_HASH, DE_OSX_EURO, DE_OSX_LPRN, DE_OSX_RPRN, DE_OSX_GRV,                                      DE_OSX_PLUS, KC_MINS, DE_OSX_SLSH, KC_ASTR, KC_PERC, KC_QUOT,
-      _______, DE_OSX_PERC, DE_OSX_CIRC, DE_OSX_LBRC, DE_OSX_RBRC, DE_OSX_TILD, _______, _______, _______, _______, KC_AMPR, KC_EQL,  KC_COMM, KC_DOT,  KC_SLSH, KC_MINS,
-                                 _______, _______, _______, KC_SCLN, DE_OSX_EQL,  DE_OSX_EQL,  KC_SCLN, _______, _______, _______
+      _______, DE_OSX_EXLM, DE_OSX_AT,   DE_OSX_LCBR, DE_OSX_RCBR, DE_OSX_PIPE,                                     _______, _______, DE_OSX_ASTR, _______, DE_OSX_ACUT, _______,
+      _______, DE_OSX_HASH, DE_OSX_EURO, DE_OSX_LPRN, DE_OSX_RPRN, DE_OSX_GRV,                                      DE_OSX_PLUS, KC_MINS, DE_OSX_PARA, DE_OSX_DQOT, DE_OSX_GRV, _______,
+      _______, DE_OSX_PERC, DE_OSX_CIRC, DE_OSX_LBRC, DE_OSX_RBRC, DE_OSX_TILD, _______, _______, _______, _______, DE_OSX_AMPR, DE_OSX_EQL,  _______, _______,  KC_SLSH, _______,
+                                                     _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 /*
  * Raise Layer: Number keys, media, navigation
