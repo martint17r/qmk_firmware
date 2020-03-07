@@ -35,14 +35,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |   <    |   Z  |   X  |   C  |   V  |   B  |      |  :   |  |      |      |   N  |   M  |   ,  |   .  |   -  |   ß    |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
  *                        |      |      | Enter| Space| CTRL |  |  CMD | Space| Bksp |   :  | AltGr|
- *                        |      |  ALT | Shift| Lower| Tab  |  |      | Raise|      |      |      |
+ *                        |      |  ALT | Lower| Shift| Tab  |  |  ESC | Shift| Raise|      |      |
  *                        `---------------------------------'  `----------------------------------'
  */
     [_QWERTY] = LAYOUT(
       KC_ESC,                  KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,                                         KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC,
       CTL_T(KC_NO),            KC_A,   KC_S,   KC_D,   KC_F,   KC_G,                                         KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
-      KC_GRAVE,                KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   _______, DE_OSX_COLN, DE_OSX_COLN, _______,   KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_MINS,
-             KC_MUTE, KC_LALT, KC_SFTENT, LT(_LOWER, KC_SPC), CTL_T(KC_TAB),MT(MOD_LGUI,KC_ESC) , LT(_RAISE, KC_SPC), KC_BSPC, DE_OSX_COLN, KC_MUTE
+      KC_GRAVE,                KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   _______, KC_TAB, KC_LGUI, _______,   KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_MINS,
+             KC_MUTE, KC_LALT, LT(_LOWER, KC_ENT), MT(MOD_LSFT,KC_SPC), CTL_T(KC_TAB),MT(MOD_LGUI,KC_ESC) , MT(MOD_RSFT,KC_SPC), LT(_RAISE, KC_BSPC), DE_OSX_COLN, KC_MUTE
     ),
 /*
  * Lower Layer: Symbols
@@ -50,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-------------------------------------------.                              ,-------------------------------------------.
  * |        |  !   |  @   |  {   |  }   |  |   |                              |      |  $   |  *   |      |  ´   |        |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
- * |        |  #   |  €   |  (   |  )   |  `   |                              |   +  |  ß   |  §   |  "   |  `   |        |
+ * |        |  #   |  €   |  (   |  )   |  '   |                              |   +  |  ß   |  §   |  "   |  `   |        |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
  * |        |  %   |  ^   |  [   |  ]   |  ~   |      |      |  |      |      |   &  |  =   |  /   |      |   -  |        |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
@@ -59,8 +59,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        `----------------------------------'  `----------------------------------'
  */
     [_LOWER] = LAYOUT(
-      _______, DE_OSX_EXLM, DE_OSX_AT,   DE_OSX_LCBR, DE_OSX_RCBR, DE_OSX_PIPE,                                     _______, DE_OSX_DLR, DE_OSX_ASTR, _______, DE_OSX_ACUT, _______,
-      _______, DE_OSX_HASH, DE_OSX_EURO, DE_OSX_LPRN, DE_OSX_RPRN, DE_OSX_GRV,                                      DE_OSX_PLUS, KC_MINS, DE_OSX_PARA, DE_OSX_DQOT, DE_OSX_GRV, _______,
+      _______, DE_OSX_EXLM, DE_OSX_AT,   DE_OSX_LCBR, DE_OSX_RCBR, DE_OSX_PIPE,                                     _______, DE_OSX_DLR, DE_OSX_ASTR, DE_OSX_QST, DE_OSX_ACUT, _______,
+      _______, DE_OSX_HASH, DE_OSX_EURO, DE_OSX_LPRN, DE_OSX_RPRN, DE_OSX_QUOT,                                      DE_OSX_PLUS, KC_MINS, DE_OSX_PARA, DE_OSX_DQOT, DE_OSX_GRV, _______,
       _______, DE_OSX_PERC, DE_OSX_CIRC, DE_OSX_LBRC, DE_OSX_RBRC, DE_OSX_TILD, _______, _______, _______, _______, DE_OSX_AMPR, DE_OSX_EQL,  DE_OSX_SLSH, _______,  KC_SLSH, _______,
                                                      _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),

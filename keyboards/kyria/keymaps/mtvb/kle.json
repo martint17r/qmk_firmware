@@ -32,7 +32,7 @@
     {
       "x": 1
     },
-    "O\n\nF9"
+    "O\n\nF9\n?"
   ],
   [
     {
@@ -75,11 +75,13 @@
     },
     "S\n\n2\n€",
     {
-      "x": 1
+      "x": 1,
+      "n": true
     },
     "F\n\n4\n)",
     {
-      "x": 6.5
+      "x": 6.5,
+      "n": true
     },
     "J\n<i class='fa fa-angle-down'></i>\n7\nß",
     {
@@ -178,29 +180,30 @@
   [
     {
       "y": -0.75,
-      "x": 2.5
+      "x": 2.5,
+      "a": 4
     },
-    "",
+    "<i class='kb kb-Multimedia-Mute-2'></i>",
     {
       "a": 5
     },
     "\\\nALT",
     {
       "x": 2.5,
-      "a": 7
-    },
-    "",
-    {
-      "x": 0.5,
       "a": 4
     },
-    ":",
+    "TAB",
+    {
+      "x": 0.5
+    },
+    "⌘",
     {
       "x": 2.5,
       "a": 5
     },
     ":",
     {
+      "g": true,
       "a": 7
     },
     ""
@@ -209,24 +212,25 @@
     {
       "y": -0.75,
       "x": 4.5,
+      "g": false,
       "a": 5
     },
-    "Enter\nSHIFT",
+    "Enter\nLower",
     {
       "x": 5.5
     },
-    "BSP"
+    "BSP\nRaise"
   ],
   [
     {
       "y": -0.5,
       "x": 5.5
     },
-    "Space\nLower",
+    "Space\nSHIFT",
     {
       "x": 3.5
     },
-    "Space\nRaise"
+    "Space\nSHIFT"
   ],
   [
     {
